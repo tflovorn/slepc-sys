@@ -1,0 +1,13 @@
+[package]
+name = "slepc-sys"
+version = "0.1.0"
+authors = ["Tim Lovorn <tflovorn@austin.utexas.edu>"]
+
+[dependencies]
+libc = "*"
+mpi = "*"
+petsc-sys = { git = "https://gitlab.com/tflovorn/petsc-sys" }
+
+[build-dependencies]
+build-probe-mpi = "*"
+bindgen = "*"

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+export PETSC_DIR="$HOME/petsc"
+export PETSC_ARCH="arch-linux2-complex-debug"
+export PETSC_LIB="$PETSC_DIR/$PETSC_ARCH/lib"
+export SLEPC_DIR="$HOME/slepc-3.8.1"
+export SLEPC_LIB="$SLEPC_DIR/$PETSC_ARCH/lib"
+
+#rustup run nightly cargo clippy
+cargo build --examples
+mpiexec target/debug/examples/simple
